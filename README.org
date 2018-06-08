@@ -1,0 +1,4 @@
+#+TITLE: StricklandOS: A Lisp OS
+
+
+* TODO Why

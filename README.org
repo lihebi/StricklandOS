@@ -34,30 +34,31 @@ the development, and maybe most of the maintenance is coming from
 device drivers. But, I think the choice of C brings fundamentally
 difficulty in the development.
 
-Two critical aspects drives my belief of the choice of Lisp family
-language: functional and meta-ability. 
+Two critical aspects drive my belief of the choice of Lisp family
+language: functional and meta-ability.
 
 I believe functional language is the "more natural" way to express how
 the program works fundamentally, just as mathematical formulas
-represent how the world works. Different layer of OS desires different
-level of abstractions, of course.
+represent how the world works.
 
 Lisp is the only meta language in its indeed sense, coming from the
 power of representing code as lists, thus can be treated as data. Many
 other languages are try to claim to support meta-programming, but they
 pick up a rather small sub-feature, and when all the power are
-generalized, they become a dialect of Lisp. A major beauty of Lisp
-lies in the ease of creating and using /Domain Specific Languages
-(DSLs)/ to solve domain specific problems. Lisp is well believed as
-the highest level of abstraction of language. While it is for sure
-(and is what current hierarchy offers) that using low level languages
-can gradually build higher level of abstractions, for example, from
-Assembly to C, than to Python, Java, Common Lisp, Scheme. But a second
-think about it, I realize a problem: why not the other way around? All
-we need is a Lisp interpreter, and when we need low-level interactions
-with hardware, we implement a DSL for that. The advantage is that, we
-no longer need to try to build the abstraction the hard way, because
-we are already in it.
+generalized, they become a dialect of Lisp.  Back to OS, different
+layer of OS desires different level of abstractions, of course. The
+meta feature of Lisp provides a principled solution for this. A major
+beauty of Lisp lies in the ease of creating and using /Domain Specific
+Languages (DSLs)/ to solve domain specific problems. Lisp is well
+believed as the highest level of abstraction of language. While it is
+for sure (and is what current hierarchy offers) that using low level
+languages can gradually build higher level of abstractions, for
+example, from Assembly to C, than to Python, Java, Common Lisp,
+Scheme. But a second think about it, I realize a problem: why not the
+other way around? All we need is a Lisp interpreter, and when we need
+low-level interactions with hardware, we implement a DSL for that. The
+advantage is that, we no longer need to try to build the abstraction
+the hard way, because we are already in it.
 
 #+BEGIN_QUOTE
 Many think that C is a general purpose language, and Lisp is domain
@@ -65,7 +66,7 @@ specific for, say, /Artificial Intelligence/. However, just the
 reverse is true.
 #+END_QUOTE
 
-By the way, they the chip is designed to operate in low level
+By the way, why the chip is designed to operate in low level
 instructions, instead of functional? Sure, the real world appears not
 a functional world, and we are changing the environment to achieve
 things. But since the fundamental is mathematics, is there something

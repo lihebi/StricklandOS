@@ -1,4 +1,93 @@
 #+TITLE: StricklandOS: A Lisp OS
 
+The name comes from the central character Charles Strickland in the
+book /The Moon and Sixpence/ by /William Somerset Maugham/, who gives
+coverage for me to pursue my desire, follow my heart, and do the right
+thing.
 
-* TODO Why
+#+BEGIN_QUOTE
+so busy yearning for the moon that he never saw the sixpence at his
+feet
+#+END_QUOTE
+
+
+* Why
+
+The major player for modern open source OS is GNU/Linux. However, it
+was designed 30 years ago, and many of the critical design decisions
+no longer hold in today's computing facilities. The design decision
+has lead Linux to choose C as the language. Because C appears to be
+"more natural" in the sense that imperative statements are easy to
+understand, it is in most cases not the ideal way of expressing how
+things works.
+
+Language, although pretty much all Turing equivalent, has different
+expressiveness powers. Just as all natural languages can express the
+same thing, many people prefer to express in English than an ancient
+language in which they have a hard time finding the right words.
+
+The choice of programming language affects the expressiveness, thus
+the maintainability in software design. There are tons of traffics in
+the Linux development mailing list, and hundreds of patches are still
+applying everyday, despite its 30 years' history. I did not involve in
+the development, and maybe most of the maintenance is coming from
+device drivers. But, I think the choice of C brings fundamentally
+difficulty in the development.
+
+Two critical aspects drives my belief of the choice of Lisp family
+language: functional and meta-ability. 
+
+I believe functional language is the "more natural" way to express how
+the program works fundamentally, just as mathematical formulas
+represent how the world works. Different layer of OS desires different
+level of abstractions, of course.
+
+Lisp is the only meta language in its indeed sense, coming from the
+power of representing code as lists, thus can be treated as data. Many
+other languages are try to claim to support meta-programming, but they
+pick up a rather small sub-feature, and when all the power are
+generalized, they become a dialect of Lisp. A major beauty of Lisp
+lies in the ease of creating and using /Domain Specific Languages
+(DSLs)/ to solve domain specific problems. Lisp is well believed as
+the highest level of abstraction of language. While it is for sure
+(and is what current hierarchy offers) that using low level languages
+can gradually build higher level of abstractions, for example, from
+Assembly to C, than to Python, Java, Common Lisp, Scheme. But a second
+think about it, I realize a problem: why not the other way around? All
+we need is a Lisp interpreter, and when we need low-level interactions
+with hardware, we implement a DSL for that. The advantage is that, we
+no longer need to try to build the abstraction the hard way, because
+we are already in it.
+
+#+BEGIN_QUOTE
+Many think that C is a general purpose language, and Lisp is domain
+specific for, say, /Artificial Intelligence/. However, just the
+reverse is true.
+#+END_QUOTE
+
+By the way, they the chip is designed to operate in low level
+instructions, instead of functional? Sure, the real world appears not
+a functional world, and we are changing the environment to achieve
+things. But since the fundamental is mathematics, is there something
+we are missing?
+
+Modern operating system should be dynamic too. Instead of giving fixed
+set of configuration in different format configuration files, users
+should be able to modify each function of the OS easily. That is
+another example of lost wisdom in the Lisp machines.
+
+The Lisp operating system has come through a tough way, and failed to
+make its popularity in the last 30 years. There are many writings for
+the failure of Lisp machines. One interesting point I see is that, the
+goodness of Lisp machines still make tons of sense and reads exactly
+like a lost wisdom (TODO) and the bad part, which is the critics about
+it to try to reason the failure, is mostly not true today at all
+(TODO).
+
+All in all, it is my belief that, just as the Lisp played a central
+role in the beginning of history of the digital computing (McCarthy
+1958), Lisp will continue to play the central role in the near
+future. The last 30 years are more business oriented boost of the
+computing, and many worse-is-better solutions are proposed and get
+their popularity. But 30 years are like a glance in the river of time.
+
